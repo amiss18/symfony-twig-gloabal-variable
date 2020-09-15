@@ -19,16 +19,6 @@ Installation
 $ composer install
 ```
 
-Usage
------
-- Run the PHP webserver:
-
-
-```bash
-$ php -S localhost:8000 -t public
-```
- Access from a browser using this URL: `http://localhost:8000`
-
 
 
 - CSS & JS 
@@ -48,6 +38,15 @@ $ yarn run dev
 New files will be generated in `public/build/` directory.
 
 
+Usage
+-----
+- Run the PHP webserver:
+
+
+```bash
+$ php -S localhost:8000 -t public
+```
+ Access from a browser using this URL: `http://localhost:8000`
 
 
 [1]: https://symfony.com/doc/current/reference/requirements.html
