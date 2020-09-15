@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bootstrap 5 alpha!{% endblock %}
+
+{% block body %}
+
+    <div class="col-sm-12 col-md-12 col-lg-12">
+        <!--========= movie ===========  -->
+        <div class="movie-content  clearfix movie-details">
+            <div class="row">
+                <div class="col-md-5 col-sm-12 col-xs-12">
+                    <div class="movie-image">
+                        {% for image in movie.pictures %}
+                            <img src="{{ asset('images/'~ image.name) }}" class="img-fluid img-thumbnail" alt="{{ movie.title }}">
+
+                        {% endfor %}
+
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-md-offset-1 col-sm-12 col-xs-12">
+                    <h2 class="name">
+                        {{  movie.title }} <br>
+                        <i class="fa fa-thumbs-up fa-2x text-primary"></i>
+                        <span class="fa fa-2x"> {{ movie.likes }}</span>
+                    </h2>
+                    <hr />
+
+
+
+                    <div class="project-info-box">
+                        <p><b>Year:</b> {{ movie.year }}</p>
+                        <p><b>Actors:</b> {{ movie.actors | join(' , ') }}</p>
+                        <p class="mb-0"><b>Genres:</b> {{ movie.genres | join(' , ') }} </p>
+                    </div>
+
+
+                    <hr />
+                    <div class="description ">
+                        <div>
+                            {{ movie.description | nl2br }}
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            {#<a href="javascript:void(0);" class="btn btn-primary btn-lg">Add movie</a>#}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end movie -->
+    </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{#======= Affichage de tous les films sur la page d'accueil ======#}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Bootstrap 5 alpha!{% endblock %}
+
+{% block body %}
+
+    <div class="example-wrapper mb-5 mt-5">
+        <h1 class="text-center py-4">Movies data from Wikipedia✅</h1>
+
+    </div>
+
+
+
+    <div class="grid-container">
+        {% for item  in movies %}
+            <div class="card grid-item">
+                <img src="{{ asset('images/'~''~ item.pictures[0].name) }}" class="card-img-top " alt="{{ item.title }}"
+                     height="200px">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.title }}</h5>
+                    <p class="card-text">{{ item.description| slice(0,110) }}</p>
+                    <a href="{{ path('movie_show', {'id': item.id}) }}" class="btn btn-primary"><i class="fa fa-eye" ></i>&nbsp;show details</a>
+
+                </div>
+            </div>
+        {% else %} <p> not found</p>
+        {% endfor %}
+
+
+    </div>
+{% endblock %}
+

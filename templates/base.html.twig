@@ -1,0 +1,37 @@
+{# base.html.twig #}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>{% block title %}Bootstrap 5{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+
+</head>
+
+<body>
+
+    {# inlude menu #}
+    {% include 'partials/_nav.html.twig' %}
+
+    {# inlude carousel #}
+    {% include  'partials/_carousel.html.twig' %}
+
+    <main class="container mt-3" role="main">
+        {% block body %}{% endblock %}
+    </main>
+
+
+    {% include 'partials/_footer.html.twig' %}
+
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock javascripts%}
+
+</body>
+</html>

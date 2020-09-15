@@ -1,0 +1,116 @@
+// Required
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~font-awesome";
+
+$theme-colors: (
+        "primary": #f50057,
+        "secondary": #c62828,
+        "success": $success,
+        "info": $info,
+        "warning": $warning,
+        "danger": $danger,
+        "light": $light,
+        "dark": $dark
+);
+
+$main-color: map_get($theme-colors, 'primary');
+
+
+@import '~bootstrap';
+
+footer {
+  background: map_get($theme-colors, 'primary');
+  margin-top: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  p {
+    color: darken(#fff, .8);
+    font-size: 13px;
+    margin-bottom: 0.25em
+  }
+
+  #footer-resources {
+    text-align: right;
+    i {
+      color: darken(#fff, .8);
+      font-size: 28.5px;
+      margin-left: 0.5em
+    }
+  }
+
+}
+
+
+
+body {
+
+
+  background: $light;
+
+}
+main{
+  min-height: 40vh;
+}
+.carousel {
+  height: 560px;
+  opacity: .8;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-item,
+.carousel-inner {
+  height: 100%;
+  width: auto;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-item {
+  text-align: center;
+}
+
+
+//movies grid
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* or simply "1fr 1fr;" */
+  grid-row-gap: 1.5rem;
+  grid-column-gap: $grid-gutter-width; //1.5rem
+}
+
+.grid-item {
+
+  background-color: #f8f8f8;
+  box-shadow: 0 0 3px #666;
+  text-align: center;
+
+  img{
+    max-width: 100%;
+  }
+}
+
+
+//details page
+.movie-content .movie-image {
+  background-color: #fff;
+  display: block;
+  min-height: 238px;
+  overflow: hidden;
+  position: relative
+}
+
+.movie-content .movie-details {
+  border-bottom: 1px solid #dfe5e9;
+  padding-bottom: 17px;
+  padding-left: 16px;
+  padding-top: 16px;
+  position: relative;
+  background: #fff
+}
+
