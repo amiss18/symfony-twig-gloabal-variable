@@ -8,7 +8,7 @@ This is an example web app using  Symfony 5 , and Carousel Bootstrap 5-alpha.
 Requirements
 ------------
 
-  * PHP 7.2.9 or higher;
+  * PHP 8.0 or higher;
   * and the [usual Symfony application requirements][1].
 
 Installation
