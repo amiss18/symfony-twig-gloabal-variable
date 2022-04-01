@@ -3,6 +3,8 @@ Symfony 5 Webpack-encore & bootstrap 5
 
 This is an example web app using  Symfony 5 , and Carousel Bootstrap 5-alpha.
 
+![Alt text](screenshot/header.png?raw=true "home page")
+
 Requirements
 ------------
 

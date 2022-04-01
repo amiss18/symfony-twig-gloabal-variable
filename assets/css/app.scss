@@ -2,8 +2,19 @@
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
 @import "~font-awesome";
+//$primary: #f50057 !default;
 
+// set custom colors
+$custom-colors: (
+        "primary": #f50057,
+);
+
+// merge maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+/*
 $theme-colors: (
         "primary": #f50057,
         "secondary": #c62828,
@@ -13,12 +24,24 @@ $theme-colors: (
         "danger": $danger,
         "light": $light,
         "dark": $dark
-);
+) !default;;
+*/
 
-$main-color: map_get($theme-colors, 'primary');
 
 
-@import '~bootstrap';
+//$main-color: map_get($theme-colors, 'primary');
+
+//@import '~bootstrap';
+@import '~bootstrap/scss/bootstrap.scss';
+
+
+
+
+.my-bg-primary{
+  background: map_get($theme-colors, 'primary');
+}
+
+
 
 footer {
   background: map_get($theme-colors, 'primary');
